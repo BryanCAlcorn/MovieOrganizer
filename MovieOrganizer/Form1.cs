@@ -77,12 +77,12 @@ namespace MovieOrganizer
 
         private void SetRowStatus(DataGridViewRow row, string message)
         {
-            row.Cells[3].Value = message;
+            row.Cells["colStatus"].Value = message;
         }
 
         private void SetRowPath(DataGridViewRow row, string path)
         {
-            row.Cells[4].Value = path;
+            row.Cells["colNewPath"].Value = path;
         }
 
         private void btnOrganize_Click(object sender, EventArgs e)
@@ -107,11 +107,11 @@ namespace MovieOrganizer
                     sbNewPath.Append(lblTopLevelPath.Text);
                 }
                 sbNewPath.Append("\\");
-                sbNewPath.Append((string)dgvcb.Value);
+                sbNewPath.Append(((string)dgvcb.Value).Trim());
                 sbNewPath.Append("\\");
                 if (!String.IsNullOrEmpty((string)row.Cells[2].Value))
                 {
-                    sbNewPath.Append((string)row.Cells[2].Value);
+                    sbNewPath.Append(((string)row.Cells[2].Value).Trim());
                     if (!sbNewPath.ToString().EndsWith("\\"))
                     {
                         sbNewPath.Append("\\");
@@ -141,6 +141,7 @@ namespace MovieOrganizer
                 else
                 {
                     SetRowStatus(row, "Path Doesn't Exist");
+                    SetRowPath(row, newPath);
                 }
                 progBarOrgProgress.PerformStep();
             }

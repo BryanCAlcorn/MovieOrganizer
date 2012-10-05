@@ -34,8 +34,15 @@
             this.selectFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ofdFindMovie = new System.Windows.Forms.OpenFileDialog();
             this.gridShowMovies = new System.Windows.Forms.DataGridView();
+            this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGenres = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colSubFolders = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNewPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnOrganize = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.fbdFindMovie = new System.Windows.Forms.FolderBrowserDialog();
@@ -43,14 +50,7 @@
             this.lblTopLevelPath = new System.Windows.Forms.Label();
             this.btnSelectTopLevel = new System.Windows.Forms.Button();
             this.cbCreateFolders = new System.Windows.Forms.CheckBox();
-            this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGenres = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colSubFolders = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNewPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.progBarOrgProgress = new System.Windows.Forms.ProgressBar();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridShowMovies)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,19 @@
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.infoToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            resources.ApplyResources(this.infoToolStripMenuItem, "infoToolStripMenuItem");
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            // 
             // ofdFindMovie
             // 
             this.ofdFindMovie.FileName = "openFileDialog1";
@@ -106,6 +119,33 @@
             this.colStatus,
             this.colNewPath});
             this.gridShowMovies.Name = "gridShowMovies";
+            // 
+            // colTitle
+            // 
+            resources.ApplyResources(this.colTitle, "colTitle");
+            this.colTitle.Name = "colTitle";
+            this.colTitle.ReadOnly = true;
+            // 
+            // colGenres
+            // 
+            resources.ApplyResources(this.colGenres, "colGenres");
+            this.colGenres.Name = "colGenres";
+            // 
+            // colSubFolders
+            // 
+            resources.ApplyResources(this.colSubFolders, "colSubFolders");
+            this.colSubFolders.Name = "colSubFolders";
+            // 
+            // colStatus
+            // 
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
+            // colNewPath
+            // 
+            resources.ApplyResources(this.colNewPath, "colNewPath");
+            this.colNewPath.Name = "colNewPath";
             // 
             // btnOrganize
             // 
@@ -139,50 +179,10 @@
             this.cbCreateFolders.Name = "cbCreateFolders";
             this.cbCreateFolders.UseVisualStyleBackColor = true;
             // 
-            // colTitle
-            // 
-            resources.ApplyResources(this.colTitle, "colTitle");
-            this.colTitle.Name = "colTitle";
-            this.colTitle.ReadOnly = true;
-            // 
-            // colGenres
-            // 
-            resources.ApplyResources(this.colGenres, "colGenres");
-            this.colGenres.Name = "colGenres";
-            // 
-            // colSubFolders
-            // 
-            resources.ApplyResources(this.colSubFolders, "colSubFolders");
-            this.colSubFolders.Name = "colSubFolders";
-            // 
-            // colStatus
-            // 
-            resources.ApplyResources(this.colStatus, "colStatus");
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
-            // 
-            // colNewPath
-            // 
-            resources.ApplyResources(this.colNewPath, "colNewPath");
-            this.colNewPath.Name = "colNewPath";
-            // 
             // progBarOrgProgress
             // 
             resources.ApplyResources(this.progBarOrgProgress, "progBarOrgProgress");
             this.progBarOrgProgress.Name = "progBarOrgProgress";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            resources.ApplyResources(this.infoToolStripMenuItem, "infoToolStripMenuItem");
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // Form1
             // 

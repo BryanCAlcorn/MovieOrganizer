@@ -11,10 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		MovieOrganizer.vsmdi = MovieOrganizer.vsmdi
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{FF1C6532-9679-402F-80AC-BDC2C17E6049}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = MovieOrganizer.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -28,6 +27,8 @@ Global
 		{EEEFFCB3-8FB3-4754-A0BE-15A53E72F78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEEFFCB3-8FB3-4754-A0BE-15A53E72F78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEEFFCB3-8FB3-4754-A0BE-15A53E72F78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1C6532-9679-402F-80AC-BDC2C17E6049}.Debug|Any CPU.ActiveCfg = Debug
+		{FF1C6532-9679-402F-80AC-BDC2C17E6049}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
